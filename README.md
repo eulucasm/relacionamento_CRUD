@@ -3,8 +3,11 @@
 </p>
 
 
-## Description
-
+## Descrição
+- CRUD completo desenvolvido como base de prendisado para minha carreira.
+- Nesse CRUD temos o relacionamento entre duas tabelas (carro e modelo).
+- foi utilizado o Nest e GraphQl para a Construção.
+- Todas as funcionalidades foram testadas.
 
 
 ## Installation
@@ -12,32 +15,20 @@
 ```bash
 $ npm install
 ```
+## Prisma Run
+
+```bash
+#gerando arquivos
+$ npx prisma generate
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ npm run dev
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 
 
