@@ -1,0 +1,83 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  id: Int
+  name: String
+  color: String
+  id_model: Int
+  age: Int
+}
+
+type Modelo {
+  id: Int
+  name: String
+  type: String
+}
+
+type Query {
+  getCarData(GetCarDataInput: GetCarDataInput!): Car!
+  listCar(ListDataCarInput: ListDataCarInput!): [Car!]!
+  getModeloData(GetModeloDataInput: GetModeloDataInput!): Modelo!
+  listModelo(ListDataModeloInput: ListDataModeloInput!): [Modelo!]!
+}
+
+input GetCarDataInput {
+  id: Int!
+}
+
+input ListDataCarInput {
+  search: String!
+}
+
+input GetModeloDataInput {
+  id: Int!
+}
+
+input ListDataModeloInput {
+  search: String!
+}
+
+type Mutation {
+  createCar(CreateCarDataInput: CreateCarDataInput!): Car!
+  updateCar(UpdateCarDataInput: UpdateCarDataInput!): Car!
+  deleteCar(DeleteCarDataInput: DeleteCarDataInput!): Car!
+  createModelo(CreateModeloDataInput: CreateModeloDataInput!): Modelo!
+  updateModelo(UpdateModeloDataInput: UpdateModeloDataInput!): Modelo!
+  deleteModelo(DeleteModeloDataInput: DeleteModeloDataInput!): Modelo!
+}
+
+input CreateCarDataInput {
+  name: String
+  color: String
+  id_model: Int
+  age: Int
+}
+
+input UpdateCarDataInput {
+  id: Int!
+  name: String
+  color: String
+  id_model: String
+  age: Int
+}
+
+input DeleteCarDataInput {
+  id: Int!
+}
+
+input CreateModeloDataInput {
+  name: String
+  type: String
+}
+
+input UpdateModeloDataInput {
+  id: Int!
+  name: String
+  type: String
+}
+
+input DeleteModeloDataInput {
+  id: Int!
+}

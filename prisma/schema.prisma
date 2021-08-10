@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Car {
+
+
+  id Int @id @default(autoincrement())
+
+
+  name     String?
+  color    String?
+  age      Int?
+  id_model Int?
+
+  model Modelo? @relation("CarModelFk", fields: [id_model], references: [id])
+
+
+  created_at DateTime? @default(dbgenerated())
+  deleted_at DateTime?
+  updated_at DateTime? @default(dbgenerated())
+
+
+
+  @@index([id], name: "id")
+  @@map("CAR")
+}
+
+model Modelo {
+
+
+  id Int @id @default(autoincrement())
+
+
+  name String?
+  type String?
+
+
+  created_at DateTime? @default(dbgenerated())
+  deleted_at DateTime?
+  updated_at DateTime? @default(dbgenerated())
+
+  Car Car[] @relation("CarModelFk")
+  @@index([id], name: "id")
+  @@map("MODELO")
+}
