@@ -11,25 +11,18 @@
 
 
 ## Installation
-
 ```bash
 $ npm install
 ```
-## Prisma Run
 
+## Prisma Run
 ```bash
 #gerando arquivos
 $ npx prisma generate
+```
 
 ## Running the app
-
 ```bash
 # development
 $ npm run dev
-
-
-
-
-
-
-
+```
